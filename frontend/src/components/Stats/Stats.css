@@ -1,0 +1,26 @@
+.stats-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+}
+.stats-title {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.stats-wrapper {
+  width: 300px;
+}
+
+@media only screen and (max-width: 900px) {
+  .stats-container {
+    gap: 10px;
+    justify-content: center;
+  }
+  .stats-title {
+    font-size: 1.5rem;
+  }
+}

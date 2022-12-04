@@ -1,0 +1,35 @@
+.splash-animation-container {
+  position: absolute;
+  top: 0;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+}
+.splash-animation-wrappper {
+  font-size: 0rem;
+  opacity: 1;
+  animation: reveal-animation 1s ease-in;
+}
+
+@keyframes reveal-animation {
+  0% {
+    font-size: 0rem;
+    opacity: 0;
+    filter: blur(10px);
+  }
+  20% {
+    font-size: 4rem;
+    opacity: 1;
+    filter: blur(0px);
+  }
+  80% {
+    font-size: 4rem;
+    opacity: 1;
+    filter: blur(0px);
+  }
+  100% {
+    font-size: 0rem;
+    opacity: 0;
+    filter: blur(10px);
+  }
+}

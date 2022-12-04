@@ -1,0 +1,76 @@
+.waiting-container {
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5%;
+}
+
+.waiting-icon {
+  font-size: 3rem;
+  transition: all 1s ease-in-out;
+  rotate: 0deg;
+  animation: spin 5s infinite;
+}
+
+@keyframes spin {
+  to {
+    rotate: 360deg;
+  }
+}
+
+.waiting-title {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.waiting-sub-title {
+  font-size: 2rem;
+  font-weight: 300;
+  user-select: none;
+}
+
+.waiting-sub-title a {
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+}
+
+.waiting-sub-title a:hover {
+  text-decoration: underline;
+  font-weight: 600;
+  color: blue;
+}
+
+.waiting-sub-title a:active {
+  color: wheat;
+}
+
+.waiting-sub-title a:active::after {
+  position: absolute;
+  content: ""attr(data-text)"";
+  left: -10px;
+  font-size: x-large;
+  color: red;
+  font-weight: 600;
+  rotate: -25deg;
+}
+
+.waiting-player-list {
+  padding: 0;
+  margin: 0;
+  width: 30%;
+}
+
+@media only screen and (max-width: 900px) {
+  .waiting-sub-title,  
+  .waiting-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .waiting-sub-title a:active::after {
+    font-size: 1.5rem;
+  }
+
+  .waiting-player-list {
+    width: 80%;
+  }
+}

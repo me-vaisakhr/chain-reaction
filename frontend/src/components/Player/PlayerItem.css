@@ -1,0 +1,60 @@
+.player-item-container {
+  display: flex;
+  padding: 24px;
+  gap: 5%;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid #ececec;
+  border-radius: 10px;
+  margin-bottom: 1em;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+}
+
+.player-item-container:hover {
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.12), 0 1px 5px rgba(0, 0, 0, 0.24);
+}
+
+.player-icon,
+.player-name {
+  font-size: 2rem;
+}
+
+.player-color {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  background-color: white;
+  border: 3px solid black;
+}
+
+.current-player {
+  position: absolute;
+  top: 30%;
+  right: -8%;
+  font-size: 2rem;
+}
+
+.player-tag {
+  position: absolute;
+  left: -18px;
+  rotate: -45deg;
+  top: 0px;
+  background: red;
+  width: 20%;
+  text-align: center;
+  color: #fff;
+}
+
+@media only screen and (max-width: 900px) {
+  .player-icon,
+  .player-name {
+    font-size: 1.5rem;
+  }
+  .player-color {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}

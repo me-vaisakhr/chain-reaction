@@ -1,0 +1,46 @@
+.join-container {
+  flex-direction: column;
+  gap: 4%;
+}
+.username-title {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.username-text {
+  width: 30%;
+  padding: 2rem;
+  font-size: 2rem;
+}
+
+.join-button {
+  width: 20%;
+  height: 9%;
+  font-size: 2rem;
+  color: white;
+  background-color: #ab47bc;
+}
+
+@media only screen and (max-width: 600px) {
+  .join-container {
+    gap: 5%;
+  }
+  .username-title {
+    font-size: 1.5rem;
+    padding: 24px;
+    text-align: center;
+  }
+
+  .username-text {
+    width: 60%;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .join-button {
+    width: 60%;
+    font-size: 1.5rem;
+  }
+}

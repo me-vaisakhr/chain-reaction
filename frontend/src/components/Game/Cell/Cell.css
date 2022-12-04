@@ -1,0 +1,36 @@
+.cell-container {
+  border: 1px solid #ececec;
+  height: 75px;
+  width: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  background-color: white;
+  opacity: 1;
+}
+
+.cell-container:not(.disabled):hover {
+  scale: 1.2;
+  z-index: 10;
+}
+
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.cell-container:not(.disabled):active {
+  scale: 1.4;
+}
+
+@media only screen and (max-width: 900px) {
+  .cell-container {
+    height: 50px;
+    width: 50px;
+  }
+  .cell-container:active {
+    scale: 2;
+  }
+}

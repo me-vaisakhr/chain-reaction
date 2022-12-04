@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Distressed&family=Rubik+Microbe&display=swap");
+
+.lobby-container {
+  flex-direction: column;
+  gap: 5%;
+}
+
+.greetings {
+  font-size: 5rem;
+  margin: 0;
+}
+
+.lobby-logo {
+  font-size: 10rem;
+  font-family: "Rubik Distressed", cursive;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    #5335cf 0%,
+    #de005e 25%,
+    #f66e48 50%,
+    #de005e 75%,
+    #5335cf 100%
+  );
+  background-size: 400% auto;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Rubik Microbe", cursive;
+  color: greenyellow;
+  user-select: none;
+  animation: shine 20s linear infinite;
+}
+@keyframes shine {
+  to {
+    background-position: 400% center;
+  }
+}
+
+.lobby-create-room-button {
+  width: 30%;
+  height: 10%;
+  font-size: 2rem;
+  cursor: pointer;
+  background-color: #4490f0;
+  color: white;
+}
+
+@media only screen and (max-width: 900px) {
+  .greetings {
+    font-size: 3rem;
+  }
+  .lobby-logo {
+    font-size: 2.2rem;
+  }
+  .lobby-create-room-button {
+    width: 70%;
+    height: 10%;
+    font-size: 1.5rem;
+  }
+}

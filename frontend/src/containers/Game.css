@@ -1,0 +1,54 @@
+.game-container {
+  flex-direction: column;
+  justify-content: flex-start !important;
+  gap: 3%;
+  position: relative;
+  padding: 2rem 0;
+  transition: all 0.1s ease-in;
+}
+
+.welcome-text {
+  position: relative;
+  z-index: 100;
+  animation: reveal-greetings 1s forwards ease-in-out;
+}
+
+@keyframes reveal-greetings {
+    0%{
+        filter: blur(10px);
+        opacity: 0.1;
+        position: absolute;
+        top: 45%;
+        scale: 0;
+    }
+    20%{
+        filter: blur(0px);
+        opacity: 1;
+        position: absolute;
+        top: 45%;
+        scale: 1.5;
+    }
+    60%{
+        top: 45%;
+        scale: 1.5;
+    }
+    100%{
+        top: 0;
+        scale: 1;
+    }
+}
+
+.playground-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 5%;
+}
+
+@media only screen and (max-width: 900px) {
+    .playground-container{
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+    }
+}
