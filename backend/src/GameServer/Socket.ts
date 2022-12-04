@@ -139,6 +139,12 @@ export class ServerSocket {
       //It will finish the game by sending winner details
       console.info(`Game completed and winner is `, players[currentPlayerIndex])
       this.io.to(room_id).emit(EVENTS.FINISH, players[currentPlayerIndex])
+      console.log(`Leaving room`)
+      for (let p of players) {
+        const index = players.findIndex(player => player.id === p.id)
+        this.players[index] = { ...this.players[index], room_id: undefined, status: 'INACTIVE' }
+      }
+      socket.leave(room_id)
     })
 
     socket.on(EVENTS.DISCONNECTED, () => {

@@ -28,10 +28,11 @@ import "./Playground.css";
 
 interface PlaygroundProps {
   roomId: string;
+  viewInitilizeComplete: boolean;
   onComplete?: () => void;
 }
 
-const Playground: FC<PlaygroundProps> = ({ roomId, onComplete }) => {
+const Playground: FC<PlaygroundProps> = ({ roomId, viewInitilizeComplete, onComplete }) => {
   const playerSelection = useSelector(selection);
   const currentplayer = useSelector(currentPlayer);
   const socket = useContext(GameContext);
@@ -173,12 +174,6 @@ const Playground: FC<PlaygroundProps> = ({ roomId, onComplete }) => {
     }
   }, [grid]);
 
-  // useEffect(() => {
-  //   if (attempts) {
-  //     socket?.emit(EVENTS.SWITCH_TURN, roomId, currentplayer?.id);
-  //   }
-  // }, [attempts]);
-
   const isMyCell = (index: number) => {
     const cell = grid[index];
     return (
@@ -193,20 +188,23 @@ const Playground: FC<PlaygroundProps> = ({ roomId, onComplete }) => {
   };
 
   return (
-    <div className="game-cell-container">
-      {grid.map((cell, index) => (
-        <CellInterface
-          key={`cell-${index}`}
-          index={cell.index}
-          disable={!isMyPlay}
-          cellColor={currentplayer?.color}
-          player={cell.player}
-          bombCount={cell.bombCount}
-          isMyCell={isMyCell(index)}
-          onClick={handleCellClick}
-        />
-      ))}
-    </div>
+    <>
+      <div className="game-cell-container">
+        {grid.map((cell, index) => (
+          <CellInterface
+            key={`cell-${index}`}
+            index={cell.index}
+            disable={!isMyPlay}
+            cellColor={currentplayer?.color}
+            player={cell.player}
+            bombCount={cell.bombCount}
+            isMyCell={isMyCell(index)}
+            onClick={handleCellClick}
+          />
+        ))}
+      </div>
+      {viewInitilizeComplete && isMyPlay && <h1 className="your-turn-notifier">🫵 your turn</h1>}
+    </>
   );
 };
 

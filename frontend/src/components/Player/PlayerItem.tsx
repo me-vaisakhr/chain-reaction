@@ -15,8 +15,8 @@ const PlayerItem: FC<PlayerItemProps> = ({
 }) => {
   return (
     <div className="player-item-container">
-      {showMe && <div className="player-tag">you</div>}
       <div className="player-icon">{showMe ? `😎` : `🕵️‍♂️`}</div>
+      {showMe && <p className="me-tag">me</p>}
       <p className="player-name">{name}</p>
       <div className="player-color" style={{ backgroundColor: color }} />
       {showCurrentPlayer && <div className="current-player">👈</div>}

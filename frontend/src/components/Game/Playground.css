@@ -3,6 +3,42 @@
   grid-template-columns: repeat(7, 1fr);
 }
 
+.your-turn-notifier {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  visibility: hidden;
+  transform: translate(-50%, -50%);
+  animation: turn-anim 2s linear;
+  z-index: 20;
+  pointer-events: none;
+}
+
+@keyframes turn-anim {
+  0% {
+    visibility: visible;
+    display: block;
+    filter: blur(10px);
+    opacity: 0;
+  }
+  20% {
+    top: 40%;
+    filter: blur(0px);
+    opacity: 1;
+  }
+  80% {
+    filter: blur(1px);
+    opacity: 1;
+  }
+  100% {
+    top: 20%;
+    opacity: 0;
+    filter: blur(10px);
+    display: none;
+  }
+}
+
 /* .game-cell-container:hover {
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.12), 0 1px 5px rgba(0, 0, 0, 0.24);
 } */

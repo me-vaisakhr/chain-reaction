@@ -1,9 +1,0 @@
-.grid {
-  display: grid;
-  grid-template-columns: repeat(8, 0fr);
-}
-
-ul li {
-  display: flex;
-  justify-content: space-evenly;
-}

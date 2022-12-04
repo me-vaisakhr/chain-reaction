@@ -9,6 +9,7 @@
   transition: all 0.2s ease-in-out;
   background-color: white;
   opacity: 1;
+  text-align: center;
 }
 
 .cell-container:not(.disabled):hover {
@@ -29,6 +30,10 @@
   .cell-container {
     height: 50px;
     width: 50px;
+  }
+  .cell-container:not(.disabled):hover {
+    scale: 1;
+    z-index: 10;
   }
   .cell-container:active {
     scale: 2;

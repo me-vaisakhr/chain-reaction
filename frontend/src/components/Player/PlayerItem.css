@@ -10,7 +10,6 @@
   cursor: pointer;
   transition: all 0.2s ease-in;
   position: relative;
-  overflow: hidden;
 }
 
 .player-item-container:hover {
@@ -37,15 +36,15 @@
   font-size: 2rem;
 }
 
-.player-tag {
+.me-tag {
   position: absolute;
-  left: -18px;
-  rotate: -45deg;
-  top: 0px;
+  left: -11%;
   background: red;
-  width: 20%;
-  text-align: center;
-  color: #fff;
+  rotate: -90deg;
+  padding: 0 10%;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 @media only screen and (max-width: 900px) {
