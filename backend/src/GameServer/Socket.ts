@@ -31,6 +31,7 @@ export class ServerSocket {
     ServerSocket.instance = this
     this.players = []
     this.io = new Server(server, {
+      transports: ['websocket', 'polling'],
       serveClient: false,
       pingInterval: 10000,
       pingTimeout: 5000,
