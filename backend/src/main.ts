@@ -32,6 +32,10 @@ export default function main(port: number = Config.port) {
 
   const gameServer = new ServerSocket(server)
 
+  server.prependListener('request', (req, res) => {
+    res.setHeader('Access-Control-Allow-Origin', '*')
+  })
+
   app.get('/', (req, res) => {
     res.send('Working Express!!!')
   })
