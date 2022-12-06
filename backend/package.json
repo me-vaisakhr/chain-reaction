@@ -4,7 +4,7 @@
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
   "scripts": {
-    "start": "nodemon --experimental-modules --es-module-specifier-resolution=node",
+    "start": "node --experimental-modules --es-module-specifier-resolution=node dist/main.js",
     "start:dev": "nodemon --ext js,ts,json,env --exec 'node --experimental-specifier-resolution=node --loader ts-node/esm' src/main.ts",
     "prepare": "cd .. && husky install backend/.husky",
     "build": "tsc --project tsconfig.build.json",
