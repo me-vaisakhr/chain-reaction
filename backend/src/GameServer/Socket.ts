@@ -38,6 +38,7 @@ export class ServerSocket {
       cookie: false,
       cors: {
         origin: ['http://localhost:3000'],
+        credentials: true,
       },
     })
 
