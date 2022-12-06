@@ -37,8 +37,7 @@ export class ServerSocket {
       pingTimeout: 5000,
       cookie: false,
       cors: {
-        origin: ['http://localhost:3000'],
-        credentials: true,
+        origin: 'http://localhost:3000',
       },
     })
 
