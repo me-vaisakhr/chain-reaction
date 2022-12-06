@@ -1,3 +1,4 @@
+//--es-module-specifier-resolution=node
 import { Server as HttpServer } from 'http'
 import type { SocketId } from 'socket.io-adapter'
 import { Socket, Server } from 'socket.io'
@@ -160,3 +161,5 @@ export class ServerSocket {
     })
   }
 }
+
+export default {}
